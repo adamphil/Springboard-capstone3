@@ -1,0 +1,51 @@
+1. Dataset Summary
+Source: Guangzhou Women & Children’s Medical Center (via Kaggle)
+
+Total images: ~5,000
+
+Classes: Normal, Pneumonia
+
+Train/Test split: Provided by dataset authors
+
+Class distribution (train):
+
+Pneumonia: ~74%
+
+Normal: ~26%
+
+Image format: Grayscale, variable resolution
+
+Preprocessing: Resize to 128×128, normalization, augmentation
+
+
+2. Model Performance Summary
+2.1 Multilayer Perceptron (MLP)
+Architecture: Flatten → Dense(512) → Dropout → Dense(512) → Sigmoid
+Test Performance:
+
+Accuracy: 0.76
+
+Precision: 0.74
+
+Recall: 0.96
+
+
+2.2 Convolutional Neural Network (CNN)
+Architecture: Conv → Pool → Conv → Pool → Dense → Sigmoid
+Test Performance:
+
+Accuracy: 0.87
+
+Precision: 0.85
+
+Recall: 0.96
+
+2.3 DenseNet121 (Transfer Learning)
+Architecture: Pretrained DenseNet121 base + custom classifier
+Test Performance:
+
+Accuracy: 0.87
+
+Precision: 0.83
+
+Recall: 0.99
